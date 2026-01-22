@@ -65,7 +65,7 @@ def setup():
     driver.quit()
 def verify_invalid_login(setup):
     "verify error message for invalid login"
-    assert setup.find_element(By.ID,"username").send_keys("wrong_user")
+    assert setup.find_element(By.ID,"user-name").send_keys("wrong_user")
     assert setup.find_element(By.ID,"password").send_keys("wrong_pwd")
     assert setup.find_element(By.ID,"login-button").click()
     time.sleep(3)
